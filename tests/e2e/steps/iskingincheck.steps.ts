@@ -26,19 +26,19 @@ Then('the user sees a chessboard displayed on the screen', async () => {
 });
 
 Then('the king is placed at E1', async () => {
-  const squareE1 = await chessboard.locator('[data-id="E1"]');
+  const squareE1 = await chessboard.locator('[data-square="7,4"]');
 
   expect(squareE1.textContent()).toBe('K');
 });
 
 Then('the rook is placed at A5', async () => {
-  const squareA5 = await chessboard.locator('[data-id="A5"]');
+  const squareA5 = await chessboard.locator('[data-square="3,0"]');
 
   expect(squareA5.textContent()).toBe('R');
 });
 
 Then('a label is shown that indicates that the king is not in check', async () => {
-  const isInCheckTextVisible = await page.isVisible('text="The king is in check"');
+  const isInCheckTextVisible = await page.isVisible('text="The king is not in check"');
 
   expect(isInCheckTextVisible).toBeTruthy();
 });
