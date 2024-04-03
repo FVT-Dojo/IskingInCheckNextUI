@@ -9,11 +9,8 @@ describe('StartButton Component', () => {
         expect(screen.getByRole('button')).toBeInTheDocument();
     });
 
-    test.skip('calls the start function when clicked', () => {
-        // const mockStartFunction = jest.fn();
-        // render(<StartButton onStart={mockStartFunction} />);
-
-        // fireEvent.click(screen.getByRole('button'));
-        // expect(mockStartFunction).toHaveBeenCalled();
+    test('button has the correct text', () => {
+        render(<StartButton />);
+        expect(screen.getByText('Start the game, hombre!')).toBeInTheDocument();
     });
 });

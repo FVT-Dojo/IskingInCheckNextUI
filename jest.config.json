@@ -1,5 +1,22 @@
 {
-    "preset": "ts-jest",
-  "testEnvironment": "node",
-  "testMatch": [ "**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(test).[jt]s?(x)" ]
+  "preset": "ts-jest",
+  "testEnvironment": "jsdom", 
+  "testMatch": [
+    "**/__tests__/**/*.[jt]s?(x)",
+    "**/?(*.)+(test).[jt]s?(x)"
+  ],
+  "globals": {
+    "ts-jest": {
+      "tsconfig": "tsconfig.jest.json"
+    }
+  },
+  "moduleNameMapper": {
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+  },
+  "transform": {
+    "^.+\\.(ts|tsx)$": "ts-jest"
+  },
+  "transformIgnorePatterns": [
+    "node_modules/(?!your-module/)"
+  ]
 }
