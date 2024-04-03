@@ -1,5 +1,5 @@
 {
     "default" :{
-        "paths":["tests/features/"]
+        "paths":["tests/e2e/features/"]
     }
 }
