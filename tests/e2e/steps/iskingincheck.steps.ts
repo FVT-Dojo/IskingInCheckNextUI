@@ -1,23 +1,25 @@
 import { Given, When, Then } from "@cucumber/cucumber";
 
-import { chromium, expect } from "@playwright/test";
+import { Page, chromium, expect } from "@playwright/test";
+
+let page: Page;
 
 Given('the user is in the UI', async () => {
     const browser = await chromium.launch({ headless: false });
 
     const context = await browser.newContext();
 
-    this.page = await context.newPage();
+    page = await context.newPage();
 
-    await this.page.goto("http://localhost:3000");
+    await page.goto("http://localhost:3000");
   });
 
 When('the user clicks the start game button', async () => {
-  await this.page.locator("[data-id=start-game-button]").click();
+  await page.locator("[data-id=start-game-button]").click();
 });
 
 Then('the user sees a chessboard displayed on the screen', async () => {
-  const chessboard = await this.page.locator(`[id="chessboard"]`);
+  const chessboard = await page.locator(`[id="chessboard"]`);
 
   expect(chessboard).toBeDefined();
 });
