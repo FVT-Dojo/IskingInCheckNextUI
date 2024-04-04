@@ -16,7 +16,7 @@ Given('the user is in the UI', async () => {
   });
 
 When('the user clicks the start game button', async () => {
-  await page.locator('[data-id="start-game-button"]').click();
+  await page.locator('[data-testid="start-game-button"]').click();
 });
 
 Then('the user sees a chessboard displayed on the screen', async () => {
