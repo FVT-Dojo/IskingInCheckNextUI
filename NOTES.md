@@ -29,3 +29,8 @@ Startbutton is made
 Chessboard component: 
 - ✅ Setup first version of a test
 - ✅ Setup first version of the code
+
+🥫 4:
+- ✅ Add test for alternating colors
+- ✅ Include text colors in the test
+- ✅ Add test when a King is included in the data
