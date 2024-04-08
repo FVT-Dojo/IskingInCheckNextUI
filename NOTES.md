@@ -24,3 +24,8 @@ Startbutton is made
 - Create a game component:
     - This should render the startGame button
     - After clicking on the button, a chessboard should be shown
+
+🥫 3:
+Chessboard component: 
+- ✅ Setup first version of a test
+- ✅ Setup first version of the code
