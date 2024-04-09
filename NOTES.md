@@ -34,3 +34,8 @@ Chessboard component:
 - ✅ Add test for alternating colors
 - ✅ Include text colors in the test
 - ✅ Add test when a King is included in the data
+
+🥫 5:
+Call back-end API for IsKingInCheck outcome
+- 🥰 200 OK
+- Bad BAD flow
