@@ -6,7 +6,7 @@ let page: Page;
 let chessboard: Locator;
 
 Given('the user is in the UI', async () => {
-    const browser = await chromium.launch({headless:false});
+    const browser = await chromium.launch();
 
     const context = await browser.newContext();
 

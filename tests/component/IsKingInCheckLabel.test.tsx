@@ -8,4 +8,9 @@ describe('The IsKingInCheck label Component', () => {
         render(<IsKingInCheckLabel isKingInCheck={false}/>);
         expect(screen.getByText('The king is not in check')).toBeInTheDocument();
     });
+
+    test('When it is fed true, renders a plain piece of text that states that the king is in check', () => {
+        render(<IsKingInCheckLabel isKingInCheck={true}/>);
+        expect(screen.getByText('The king is in check')).toBeInTheDocument();
+    });
 });

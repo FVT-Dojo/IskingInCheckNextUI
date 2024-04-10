@@ -48,8 +48,34 @@ Call back-end API for IsKingInCheck outcome
 -- Made changes in the steps file to fix the expect statements
 
 Fix the last step: the label that shows if the king is in check!
-- 🙋‍♂️ Create component that receives a boolean and returns the corresponding text
-false --> King is not in check
-true --> King is in check
+- ✅ Create component that receives a boolean and returns the corresponding text
+- - ✅ false --> King is not in check
+- - ✅ true --> King is in check
 DUH
+                       ______.--------.
+                     /'                \
+                    /'\                 \
+                ..-'\()'\    .'''.    ./'
+               |                .'    /
+                \..}                  '\.
+                 /     {      /'    '\   \
+                {------'    .'        '.  '|
+                 \        . |           \   |
+                  '\_____/  |            |   |
+                   /       |             |    |
+                 .'       |              |     |
+                 |       |              |       |
+                 |      |              |       |
+                 |                    |         \
+                                                 |
+
 - Update game component with label, beneath chessboard
+
+🥫 8:
+Finish E2E test
+Go mierenneuk voor visuals
+
+Next step:
+- Make sure this project can be built as a docker image
+- Add a pipeline that can push this image to dockerhub
+- Create a new repo, containing front and backend for a docker-compose so one could launch the stack in 1 single command
