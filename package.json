@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "next dev",
     "cucumber": "cucumber-js",
-    "playwright": "npx playwright test",
     "jest": "jest",
     "build": "next build",
     "start": "next start",
