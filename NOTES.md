@@ -37,5 +37,8 @@ Chessboard component:
 
 🥫 5:
 Call back-end API for IsKingInCheck outcome
-- 🥰 200 OK
-- Bad BAD flow
+- ✅ 200 OK
+- ✅ Bad BAD flow
+
+🥫 6:
+- ✅ Use the fetchGameStatus function to display a chessboard when start is clicked

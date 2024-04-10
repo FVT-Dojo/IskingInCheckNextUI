@@ -1,10 +1,15 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Chessboard from '../../src/app/components/Chessboard';
 import { boardWithKing, emptyBoard } from '../stubs/boardData.stub';
 
 describe('The Chessboard Component', () => {
+    test('Should have the right test-id to be able to be found in other tests', () => {
+        render(<Chessboard boardData={emptyBoard} />);
+        expect(screen.getByTestId('chessboard')).toBeInTheDocument();
+    })
+    
     test('Should render a chessboard with 64 squares', () => {
         const { container } = render(<Chessboard boardData={emptyBoard} />);
         
