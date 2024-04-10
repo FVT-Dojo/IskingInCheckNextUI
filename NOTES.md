@@ -75,7 +75,8 @@ DUH
 Finish E2E test
 Go mierenneuk voor visuals
 
+🥫 9:
 Next step:
-- Make sure this project can be built as a docker image
-- Add a pipeline that can push this image to dockerhub
+- ✅ Make sure this project can be built as a docker image
+- 🙋‍♂️ Add a pipeline that can push this image to dockerhub
 - Create a new repo, containing front and backend for a docker-compose so one could launch the stack in 1 single command
