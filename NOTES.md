@@ -42,3 +42,14 @@ Call back-end API for IsKingInCheck outcome
 
 🥫 6:
 - ✅ Use the fetchGameStatus function to display a chessboard when start is clicked
+
+🥫 7:
+- ✅ Check end to end test
+-- Made changes in the steps file to fix the expect statements
+
+Fix the last step: the label that shows if the king is in check!
+- 🙋‍♂️ Create component that receives a boolean and returns the corresponding text
+false --> King is not in check
+true --> King is in check
+DUH
+- Update game component with label, beneath chessboard
