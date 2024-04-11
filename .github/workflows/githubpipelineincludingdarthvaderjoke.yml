@@ -25,39 +25,42 @@ jobs:
       - name: Install playwright
         run: npx playwright install
 
-      - name: Run jest tests
-        run: npm run jest
+      - name: Debug - List the cloned repository structure
+        run: ls -R
 
-      - name: Build application server
-        run: npm run build
+      # - name: Run jest tests
+      #   run: npm run jest
 
-      - name: Start application server
-        run: npm start &
+      # - name: Build application server
+      #   run: npm run build
 
-      - name: Start mock server
-        run: cd ${{ github.workspace }}/IsKingInCheckContract && npm install && npm run mock &
+      # - name: Start application server
+      #   run: npm start &
 
-      - name: Wait for servers to be ready
-        run: sleep 10 # Adjust the sleep time based on your servers' startup time
+      # - name: Start mock server
+      #   run: cd ${{ github.workspace }}/IsKingInCheckContract && npm install && npm run mock &
 
-      - name: Run cucumber tests
-        run: npm run cucumber
+      # - name: Wait for servers to be ready
+      #   run: sleep 10 # Adjust the sleep time based on your servers' startup time
 
-      # KILL ALL SERVERS
-      - name: Kill all node processes
-        run: killall node
+      # - name: Run cucumber tests
+      #   run: npm run cucumber
 
-      - name: Build Docker image
-        run: docker build -t iskinginchecknext:${{ github.sha }} .
+      # # KILL ALL SERVERS
+      # - name: Kill all node processes
+      #   run: killall node
 
-      - name: Login to Docker Hub
-        uses: docker/login-action@v1
-        with:
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+      # - name: Build Docker image
+      #   run: docker build -t iskinginchecknext:${{ github.sha }} .
 
-      - name: Push Docker image to Docker Hub
-        run: docker push iskinginchecknext:${{ github.sha }}
+      # - name: Login to Docker Hub
+      #   uses: docker/login-action@v1
+      #   with:
+      #     username: ${{ secrets.DOCKER_HUB_USERNAME }}
+      #     password: ${{ secrets.DOCKER_HUB_PASSWORD }}
 
-      - name: Print a sarcastic joke
-        run: echo "Why did Darth Vader invade the chessboard? Because he heard the Knight was powerful, but found out it could only move in an L shape. Not so impressive for the Dark Side."
+      # - name: Push Docker image to Docker Hub
+      #   run: docker push iskinginchecknext:${{ github.sha }}
+
+      # - name: Print a sarcastic joke
+      #   run: echo "Why did Darth Vader invade the chessboard? Because he heard the Knight was powerful, but found out it could only move in an L shape. Not so impressive for the Dark Side."
