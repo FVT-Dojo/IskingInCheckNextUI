@@ -4,7 +4,7 @@ type ChessboardProps = {
 
 const Chessboard: React.FC<ChessboardProps> = ({ boardData }) => {
     return (
-        <div className={'grid grid-cols-8 gap-0 shadow-lg border-4 border-gray-300 p-1'}>
+        <div className={'grid grid-cols-8 gap-0 shadow-lg border-4 border-gray-300 p-1'} data-testid="chessboard">
             {boardData.map((row, rowIndex) => (
                 row.map((cell, colIndex) => (
                     <div 
