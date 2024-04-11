@@ -22,6 +22,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install playwright
+        run: npx playwright install
+
       - name: Run jest tests
         run: npm run jest
 
@@ -32,7 +35,7 @@ jobs:
         run: npm start &
 
       - name: Start mock server
-        run: cd IsKingInCheckContract && npm install && npm run mock &
+        run: cd ${{ github.workspace }}/IsKingInCheckContract && npm install && npm run mock &
 
       - name: Wait for servers to be ready
         run: sleep 10 # Adjust the sleep time based on your servers' startup time
