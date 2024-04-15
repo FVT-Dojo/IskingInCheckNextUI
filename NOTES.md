@@ -78,8 +78,9 @@ Go mierenneuk voor visuals
 🥫 9:
 Next step:
 - ✅ Make sure this project can be built as a docker image
-- 🙋‍♂️ Add a pipeline that can push this image to dockerhub
-  - Cucumber hangs. Fix this oracle Mathijs
+- ✅ Add a pipeline that can push this image to dockerhub
+  - 🖕 Cucumber hangs. Fix this oracle Mathijs --> did not do this, since the tests now succeed.
+  - ✅ Get the image in docker hub
 
 - Create a new repo, containing front and backend for a docker-compose so one could launch the stack in 1 single command\
 
