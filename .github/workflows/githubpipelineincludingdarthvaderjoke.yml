@@ -57,7 +57,7 @@ jobs:
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
 
       - name: Push Docker image to Docker Hub
-        run: docker push iskinginchecknext:${{ github.sha }}
+        run: docker push mcoen93ns/iskinginchecknext:${{ github.sha }}
 
       - name: Print a sarcastic joke
         run: echo "Why did Darth Vader invade the chessboard? Because he heard the Knight was powerful, but found out it could only move in an L shape. Not so impressive for the Dark Side."
