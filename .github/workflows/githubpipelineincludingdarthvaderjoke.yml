@@ -43,9 +43,9 @@ jobs:
       - name: Run cucumber tests
         run: npm run cucumber
 
-      # KILL ALL SERVERS
-      - name: Kill all node processes
-        run: killall node
+      # # KILL ALL SERVERS
+      # - name: Kill all node processes
+      #   run: killall node
 
       - name: Build Docker image
         run: docker build -t iskinginchecknext:${{ github.sha }} .
