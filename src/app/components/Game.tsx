@@ -12,8 +12,8 @@ export default function Game() {
   const onStart = async () => {
     try {
       const response = await fetchChessboardStatus(); // A quest for the state of our board
-      setBoardData(response.chessboard); // The lay of the land, the positioning of our pieces
-      setIsKingInCheck(response.isKingInCheck); // The oracle speaks of the king's peril
+      setBoardData(response.chessboardStatus.chessboard); // The lay of the land, the positioning of our pieces
+      setIsKingInCheck(response.chessboardStatus.isKingInCheck); // The oracle speaks of the king's peril
     } catch (error) {
       console.error("Merlin's beard! Error fetching chessboard data:", error); // Even wizards face troubles
     }
